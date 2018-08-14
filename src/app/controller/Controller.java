@@ -1,4 +1,7 @@
 package app.controller;
 
-public class Controller {
+import app.MainApp;
+
+public interface Controller {
+    void setApp(MainApp app);
 }
