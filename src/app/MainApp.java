@@ -19,6 +19,9 @@ public class MainApp extends Application {
         Application.launch(args);
     }
 
+    public Stage getPrimaryStage() {
+        return primaryStage;
+    }
 
     @Override
     public void start(Stage stage) throws IOException {
