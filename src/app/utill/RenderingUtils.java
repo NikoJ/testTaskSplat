@@ -23,7 +23,7 @@ public class RenderingUtils {
                         root.getChildren().add(new TreeItem<>(f.getName(), new ImageView(new Image(fileIcon))));
                     }
                 } else if (f.isDirectory()) {
-                    root.getChildren().addAll(printTree(f, new TreeItem<>(f.getName(), new ImageView(new Image(catalogIcon))), search, type, fileIcon, catalogIcon));
+                    root.getChildren().add(printTree(f, new TreeItem<>(f.getName(), new ImageView(new Image(catalogIcon))), search, type, fileIcon, catalogIcon));
                 }
             }
         }
@@ -31,9 +31,10 @@ public class RenderingUtils {
     }
 
     public static String printPath(TreeItem<String> treeItem, String str) {
-        if (Objects.nonNull(treeItem.getParent())) {
-            String temp = treeItem.getParent().getValue();
-            return printPath(treeItem.getParent(), temp) + "\\" + str;
+        if (Objects.nonNull(treeItem)) {
+            if (Objects.nonNull(treeItem.getParent())) {
+                return printPath(treeItem.getParent(), treeItem.getParent().getValue()) + "\\" + str;
+            }
         }
         return str;
     }

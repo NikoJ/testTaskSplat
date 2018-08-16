@@ -26,6 +26,8 @@ public class MainApp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         primaryStage = stage;
+        primaryStage.setMinHeight(600);
+        primaryStage.setMinWidth(1000);
         primaryStage.setTitle(APP_TITLE);
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource(ROOT_FXML));

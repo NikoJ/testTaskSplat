@@ -4,17 +4,17 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.layout.*?>
-<StackPane minHeight="600.0" minWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-           fx:controller="app.controller.MainSceneController">
+<StackPane fx:id="mainPane" minHeight="600.0" minWidth="1000.0" xmlns="http://javafx.com/javafx/8"
+           xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.MainSceneController">
     <children>
-        <SplitPane dividerPositions="0.43609022556390975" prefHeight="160.0" prefWidth="200.0">
+        <SplitPane dividerPositions="0.3" prefHeight="160.0" prefWidth="200.0">
             <items>
-                <AnchorPane maxWidth="450.0" minHeight="400.0" minWidth="250.0" prefHeight="598.0" prefWidth="250.0"
-                            SplitPane.resizableWithParent="false">
+                <AnchorPane maxWidth="450.0" minHeight="400.0" minWidth="350.0" prefHeight="598.0" prefWidth="389.0"
+                            styleClass="pane-block" SplitPane.resizableWithParent="false">
                     <children>
                         <TreeView fx:id="treeView" focusTraversable="false" layoutX="62.0" layoutY="121.0"
-                                  prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0"
-                                  AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="10.0"
+                                  prefHeight="578.0" prefWidth="318.0" AnchorPane.bottomAnchor="10.0"
+                                  AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0"
                                   AnchorPane.topAnchor="10.0">
                             <padding>
                                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
@@ -22,16 +22,20 @@
                         </TreeView>
                     </children>
                 </AnchorPane>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="598.0" prefWidth="599.0" styleClass="pane-block">
                     <children>
-                        <TextField fx:id="searhTf" layoutX="20.0" layoutY="67.0" prefHeight="31.0" prefWidth="232.0"
-                                   promptText="Поисковая строка" AnchorPane.leftAnchor="20.0"
-                                   AnchorPane.rightAnchor="307.0" AnchorPane.topAnchor="67.0"/>
-                        <TextField fx:id="typeFileTf" layoutX="265.0" layoutY="67.0" prefHeight="31.0" prefWidth="109.0"
-                                   promptText="Тип файла" AnchorPane.rightAnchor="185.0" AnchorPane.topAnchor="67.0"/>
-                        <Button fx:id="searchBtn" layoutX="394.0" layoutY="67.0" mnemonicParsing="false"
-                                prefHeight="31.0" prefWidth="145.0" text="Найти в ..." AnchorPane.rightAnchor="20.0"
-                                AnchorPane.topAnchor="67.0"/>
+                        <TextField fx:id="searchTf" layoutX="20.0" layoutY="26.0" prefHeight="47.0" prefWidth="369.0"
+                                   promptText="Поисковая строка" styleClass="text-field-main"
+                                   AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="26.0"/>
+                        <TextField fx:id="typeFileTf" layoutX="412.0" layoutY="26.0" prefHeight="47.0" prefWidth="197.0"
+                                   promptText="Тип файла" styleClass="text-field-main" AnchorPane.topAnchor="26.0"/>
+                        <Button fx:id="searchBtn" layoutX="20.0" layoutY="93.0" mnemonicParsing="false"
+                                prefHeight="44.0" prefWidth="292.0" text="Поиск" AnchorPane.leftAnchor="20.0"
+                                AnchorPane.topAnchor="93.0">
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </Button>
                         <TextArea fx:id="textArea" editable="false" layoutX="16.0" layoutY="150.0" wrapText="true"
                                   AnchorPane.bottomAnchor="117.0" AnchorPane.leftAnchor="20.0"
                                   AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="150.0"/>

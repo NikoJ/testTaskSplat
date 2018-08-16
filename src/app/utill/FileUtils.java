@@ -28,7 +28,7 @@ public class FileUtils {
                 if (line.contains(search)) return true;
             }
         } catch (IOException e) {
-            System.out.println("Ошибка");
+            System.out.println("Error: this is file: " + file.getName() + " not find");
         }
         return false;
     }
@@ -43,13 +43,13 @@ public class FileUtils {
                 stringBuilder.append(str + "\n");
             }
         } catch (IOException e) {
-            System.out.println("Ошибка");
+            System.out.println("Error");
         }
         String text = stringBuilder.toString();
         textArea.setText(text);
 
         String[] strings = text.split(search);
-        List<Integer> list = new ArrayList();
+        List list = new ArrayList();
         int count = 0;
         for (int i = 0; i < strings.length - 1; i++) {
             int length = strings[i].length();
