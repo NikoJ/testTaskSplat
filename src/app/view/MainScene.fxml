@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.layout.*?>
-<StackPane minHeight="600.0" minWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+<StackPane minHeight="600.0" minWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
            fx:controller="app.controller.MainSceneController">
     <children>
         <SplitPane dividerPositions="0.43609022556390975" prefHeight="160.0" prefWidth="200.0">
@@ -24,6 +24,14 @@
                 </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                     <children>
+                        <TextField fx:id="searhTf" layoutX="20.0" layoutY="67.0" prefHeight="31.0" prefWidth="232.0"
+                                   promptText="Поисковая строка" AnchorPane.leftAnchor="20.0"
+                                   AnchorPane.rightAnchor="307.0" AnchorPane.topAnchor="67.0"/>
+                        <TextField fx:id="typeFileTf" layoutX="265.0" layoutY="67.0" prefHeight="31.0" prefWidth="109.0"
+                                   promptText="Тип файла" AnchorPane.rightAnchor="185.0" AnchorPane.topAnchor="67.0"/>
+                        <Button fx:id="searchBtn" layoutX="394.0" layoutY="67.0" mnemonicParsing="false"
+                                prefHeight="31.0" prefWidth="145.0" text="Найти в ..." AnchorPane.rightAnchor="20.0"
+                                AnchorPane.topAnchor="67.0"/>
                         <TextArea fx:id="textArea" editable="false" layoutX="16.0" layoutY="150.0" wrapText="true"
                                   AnchorPane.bottomAnchor="117.0" AnchorPane.leftAnchor="20.0"
                                   AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="150.0"/>
@@ -41,16 +49,6 @@
                                         <Cursor fx:constant="HAND"/>
                                     </cursor>
                                 </Button>
-                            </children>
-                        </HBox>
-                        <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="67.0" spacing="20.0"
-                              AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="67.0">
-                            <children>
-                                <TextField fx:id="searhTf" prefHeight="31.0" prefWidth="204.0"
-                                           promptText="Поисковая строка"/>
-                                <TextField fx:id="typeFileTf" prefHeight="31.0" prefWidth="69.0"
-                                           promptText="Тип файла"/>
-                                <Button fx:id="searchBtn" mnemonicParsing="false" text="Найти в ..."/>
                             </children>
                         </HBox>
                     </children>
